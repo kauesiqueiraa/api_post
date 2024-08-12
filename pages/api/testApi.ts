@@ -5,16 +5,21 @@ const url = 'http://vagas.grupotecnotextil.com:9002/rest/ZWS_SQG';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === "POST") {
-        const formData = req.body;
+        // const formData = req.body;
+        console.log('Dados da Requisição:', req.body);
         
         try {
-            const response = await axios.post(url, formData, {
+            const response = await axios.post(url, req.body, {
                 headers: {
                     "Content-Type": "application/json",
                 },
+                timeout: 100000,
             });
+            console.log("Resposta da API: ", response.data);
+            res.status(response.status).json(response.data);
             res.status(200).json(response.data);
         } catch (error: any) {
+            console.log("Erro: ", error.message);
             if (error.response) {
                 res.status(error.response.status).json(error.response.data);
             } else {
