@@ -68,8 +68,8 @@ const handleSubmit = async (e: React.FormEvent) => {
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
-      <div className="bg-white p-10 rounded-lg shadow-lg w-full max-w-md">
-        <h1 className="text-3xl font-bold mb-6 text-center text-blue-500">Teste API</h1>
+      <div className="bg-grey-300 p-10 rounded-lg shadow-lg w-full max-w-md">
+        <h1 className="text-3xl font-bold mb-6 text-center text-blue-500">Teste API 177</h1>
         <form onSubmit={handleSubmit} className="space-y-6 text-center">
           <div>
             <label htmlFor="nome" className="text-lg font-medium text-black text-left">Nome Completo:</label>

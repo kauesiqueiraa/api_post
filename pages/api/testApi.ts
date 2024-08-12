@@ -1,7 +1,8 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 
-const url = 'http://vagas.grupotecnotextil.com:9002/rest/ZWS_SQG';
+const url = 'http://177.54.187.183:9002/rest/ZWS_SQG';
+// const url = 'http://vagas.grupotecnotextil.com:9002/rest/ZWS_SQG';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === "POST") {
